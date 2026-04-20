@@ -1,3 +1,4 @@
+
 # 🌳 JSON Tree Visualizer Pro
 
 > **The ultimate JSON visualization tool for VS Code.** Instantly turn any JSON into an interactive tree, mind-map graph, diff view, and more — all without leaving your editor.
@@ -155,3 +156,6 @@ MIT License — free to use, modify, and distribute.
 ---
 
 Made with ❤️ for developers who work with JSON every day.
+=======
+# json-tree-visualizer
+>>>>>>> 2f272c03c09f6209823e07efe63537bb136aded0
