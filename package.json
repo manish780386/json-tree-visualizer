@@ -1,0 +1,64 @@
+{
+  "name": "json-tree-visualizer",
+  "displayName": "JSON Tree Visualizer",
+  "description": "Visualize JSON as an interactive tree. Paste JSON or fetch from API URL.",
+  "version": "1.0.0",
+  "publisher": "mdange",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/manish780386/json-tree-visualizer.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Visualization",
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "jsonVisualizer.openPanel",
+        "title": "JSON Tree Visualizer: Open"
+      },
+      {
+        "command": "jsonVisualizer.visualizeSelection",
+        "title": "JSON Tree Visualizer: Visualize Selected JSON"
+      },
+      {
+        "command": "jsonVisualizer.fetchApi",
+        "title": "JSON Tree Visualizer: Fetch from API URL"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "jsonVisualizer.visualizeSelection",
+          "when": "editorHasSelection",
+          "group": "navigation"
+        }
+      ]
+    },
+    "keybindings": [
+      {
+        "command": "jsonVisualizer.openPanel",
+        "key": "ctrl+shift+j",
+        "mac": "cmd+shift+j"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint src"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.3.0"
+  }
+}
